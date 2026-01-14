@@ -1,9 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+nav {
+  padding: 10px;
+  background-color: #222;
 }
 
-body {
-  font-family: Arial, sans-serif;
+nav a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
 }
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  max-width: 250px;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    max-width: 100%;
+  }
+}
+
