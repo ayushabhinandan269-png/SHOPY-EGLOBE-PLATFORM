@@ -22,15 +22,10 @@ const ProductDetail = () => {
   return (
   <div className="page-container">
     <div className="product-detail">
-      
       <div className="product-detail-img">
-        <img
-          src={product.thumbnail}
-          alt={product.title}
-        />
+        <img src={product.thumbnail} alt={product.title} />
       </div>
 
-      
       <div className="product-detail-info">
         <h2>{product.title}</h2>
 
@@ -38,17 +33,24 @@ const ProductDetail = () => {
           {product.description}
         </p>
 
-        <p className="product-detail-price">
-          ₹{product.price}
-        </p>
+        <p className="product-detail-price">₹{product.price}</p>
 
+        <p><strong>Rating:</strong> ⭐ {product.rating}</p>
         <p><strong>Brand:</strong> {product.brand}</p>
         <p><strong>Category:</strong> {product.category}</p>
-        <p><strong>Rating:</strong> ⭐ {product.rating}</p>
+        <p className="stock-label">Availability: In Stock</p>
+
+        <button
+          onClick={() => dispatch(addToCart(product))}
+          style={{ marginTop: "12px" }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   </div>
 );
+
 
 };
 

@@ -6,35 +6,39 @@ const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="product-card">
-      <img
-        src={product.thumbnail}
-        alt={product.title}
-        loading="lazy"
-        className="product-img"
-      />
+  <div className="product-card">
+    <img
+      src={product.thumbnail}
+      alt={product.title}
+      loading="lazy"
+      className="product-img"
+    />
 
-      <h4>{product.title}</h4>
+    <h4>{product.title}</h4>
 
-      {/* short description */}
-      <p className="product-desc">
-        {product.description.slice(0, 70)}...
-      </p>
+    {/* Short description */}
+    <p className="product-desc">
+      {product.description.slice(0, 60)}...
+    </p>
 
-      {/* price */}
-      <p>₹{product.price}</p>
+    {/* Price */}
+    <p className="product-price">₹{product.price}</p>
 
-      {/* NEW: stock label (UI only) */}
-      <p className="stock-label">In Stock</p>
+    {/* Rating & stock */}
+    <p className="product-meta">
+      ⭐ {product.rating} | In Stock
+    </p>
 
-      <button onClick={() => dispatch(addToCart(product))}>
-        Add to Cart
-      </button>
+    <button onClick={() => dispatch(addToCart(product))}>
+      Add to Cart
+    </button>
 
-      <br />
+    <div style={{ marginTop: "8px" }}>
       <Link to={`/product/${product.id}`}>View Details</Link>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default ProductItem;

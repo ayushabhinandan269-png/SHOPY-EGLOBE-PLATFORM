@@ -10,17 +10,20 @@ const Cart = () => {
     return <h3>Your cart is empty</h3>;
   }
 
-  return (
+ return (
   <div className="page-container">
-    <h2>Your Cart</h2>
+    <div className="checkout-box">
+      <h2>Your Cart</h2>
 
-    {items.map((item) => (
-      <CartItem key={item.id} item={item} />
-    ))}
+      {items.map((item) => (
+        <CartItem key={item.id} item={item} />
+      ))}
 
-    <Link to="/checkout">Proceed to Checkout</Link>
+      <Link to="/checkout">Proceed to Checkout</Link>
+    </div>
   </div>
 );
+
 
 };
 
