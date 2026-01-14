@@ -1,16 +1,34 @@
-# React + Vite
+# ShoppyGlobe – E-commerce React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+ShoppyGlobe is a basic e-commerce application built using React and Vite.  
+It allows users to browse products, view product details, add items to a cart,
+adjust quantities, and place a dummy order.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Product listing with search
+- Product detail page (dynamic routing)
+- Add to cart, remove items, quantity control
+- Checkout with order summary
+- Redux Toolkit for state management
+- Lazy loading & performance optimization
+- Responsive design
+- 404 Not Found page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React (Vite)
+- React Router (createBrowserRouter)
+- Redux Toolkit
+- JavaScript
+- CSS
 
-## React Compiler
+## 📡 API Used
+- https://dummyjson.com/products
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔗 GitHub Repository
+ <https://github.com/ayushabhinandan269-png/SHOPY-EGLOBE-PLATFORM.git>
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run
+```bash
+npm install
+npm run dev
