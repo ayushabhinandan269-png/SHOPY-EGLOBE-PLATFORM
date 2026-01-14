@@ -42,7 +42,7 @@ const ProductDetail = () => {
 
         <button
           onClick={() => dispatch(addToCart(product))}
-          style={{ marginTop: "12px" }}
+          disabled={product.stock === 0}
         >
           Add to Cart
         </button>
