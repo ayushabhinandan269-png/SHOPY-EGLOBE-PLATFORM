@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchTerm } from "../features/products/productSlice";
 import useFetchProducts from "../hooks/useFetchProducts";
+import ProductItem from "./ProductItem";
 
 const ProductList = () => {
   const { products, loading, error } = useFetchProducts();
@@ -24,11 +25,9 @@ const ProductList = () => {
       />
 
       {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <p>{product.title}</p>
+  <ProductItem key={product.id} product={product} />
+         ))}
         </div>
-      ))}
-    </div>
   );
 };
 
