@@ -3,8 +3,8 @@ import useFetchProducts from "../hooks/useFetchProducts";
 const ProductList = () => {
   const { products, loading, error } = useFetchProducts();
 
-  if (loading) return <p>Loading products...</p>;
-  if (error) return <p>Error: {error}</p>;
+ if (loading) return <h3>Loading products, please wait...</h3>;
+if (error) return <h3 style={{ color: "red" }}>Error: {error}</h3>;
 
   return (
     <div>
