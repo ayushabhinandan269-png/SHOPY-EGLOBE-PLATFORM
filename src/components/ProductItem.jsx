@@ -6,7 +6,14 @@ const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="product-card">
+      <img
+        src={product.thumbnail}
+        alt={product.title}
+        loading="lazy"
+        className="product-img"
+      />
+
       <h4>{product.title}</h4>
       <p>₹{product.price}</p>
 
@@ -21,4 +28,5 @@ const ProductItem = ({ product }) => {
 };
 
 export default ProductItem;
+
 
