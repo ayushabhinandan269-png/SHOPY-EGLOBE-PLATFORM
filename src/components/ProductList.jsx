@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setSearchTerm } from "../features/products/productSlice";
+import { setSearchTerm } from "../product/productSlice"
 import useFetchProducts from "../hooks/useFetchProducts";
 import ProductItem from "./ProductItem";
 
