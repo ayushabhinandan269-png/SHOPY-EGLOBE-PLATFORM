@@ -1,5 +1,10 @@
-const Header = () => {
-  return <h2>Header</h2>;
+const NotFound = () => {
+  return (
+    <div>
+      <h2>404 - Page Not Found</h2>
+      <p>The page you are looking for does not exist.</p>
+    </div>
+  );
 };
 
-export default Header;
+export default NotFound;
