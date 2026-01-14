@@ -20,12 +20,36 @@ const ProductDetail = () => {
   if (!product) return <p>Loading...</p>;
 
   return (
-    <div>
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <p>₹{product.price}</p>
+  <div className="page-container">
+    <div className="product-detail">
+      
+      <div className="product-detail-img">
+        <img
+          src={product.thumbnail}
+          alt={product.title}
+        />
+      </div>
+
+      
+      <div className="product-detail-info">
+        <h2>{product.title}</h2>
+
+        <p className="product-detail-desc">
+          {product.description}
+        </p>
+
+        <p className="product-detail-price">
+          ₹{product.price}
+        </p>
+
+        <p><strong>Brand:</strong> {product.brand}</p>
+        <p><strong>Category:</strong> {product.category}</p>
+        <p><strong>Rating:</strong> ⭐ {product.rating}</p>
+      </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default ProductDetail;
