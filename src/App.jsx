@@ -4,9 +4,10 @@ import { router } from "./routes/router";
 
 const App = () => {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <Suspense fallback={<h3>Loading page...</h3>}>
+  <RouterProvider router={router} />
+       </Suspense>
+
   );
 };
 
