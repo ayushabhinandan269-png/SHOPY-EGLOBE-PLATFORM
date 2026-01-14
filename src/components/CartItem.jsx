@@ -8,24 +8,19 @@ import {
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
-  return (
-    <div>
-      <h4>{item.title}</h4>
-      <p>Quantity: {item.quantity}</p>
+ return (
+  <div className="cart-item">
+    <h4>{item.title}</h4>
+    <p>Quantity: {item.quantity}</p>
 
-      <button onClick={() => dispatch(increaseQuantity(item.id))}>
-        +
-      </button>
+    <button onClick={() => dispatch(increaseQuantity(item.id))}>+</button>
+    <button onClick={() => dispatch(decreaseQuantity(item.id))}>-</button>
+    <button onClick={() => dispatch(removeFromCart(item.id))}>
+      Remove
+    </button>
+  </div>
+);
 
-      <button onClick={() => dispatch(decreaseQuantity(item.id))}>
-        -
-      </button>
-
-      <button onClick={() => dispatch(removeFromCart(item.id))}>
-        Remove
-      </button>
-    </div>
-  );
 };
 
 export default CartItem;

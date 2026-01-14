@@ -18,15 +18,14 @@ const Checkout = () => {
     return <h3>No items to checkout</h3>;
   }
 
-  return (
-    <div>
+ return (
+  <div className="page-container">
+    <div className="checkout-box">
       <h2>Checkout</h2>
 
       <form>
         <input type="text" placeholder="Name" required />
-        <br />
         <input type="text" placeholder="Address" required />
-        <br />
         <input type="email" placeholder="Email" required />
       </form>
 
@@ -39,7 +38,9 @@ const Checkout = () => {
 
       <button onClick={handlePlaceOrder}>Place Order</button>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default Checkout;

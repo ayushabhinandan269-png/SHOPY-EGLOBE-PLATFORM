@@ -11,16 +11,17 @@ const Cart = () => {
   }
 
   return (
-    <div>
-      <h2>Your Cart</h2>
+  <div className="page-container">
+    <h2>Your Cart</h2>
 
-      {items.map((item) => (
-        <CartItem key={item.id} item={item} />
-      ))}
+    {items.map((item) => (
+      <CartItem key={item.id} item={item} />
+    ))}
 
-      <Link to="/checkout">Proceed to Checkout</Link>
-    </div>
-  );
+    <Link to="/checkout">Proceed to Checkout</Link>
+  </div>
+);
+
 };
 
 export default Cart;

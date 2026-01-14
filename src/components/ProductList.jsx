@@ -15,20 +15,25 @@ const ProductList = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={searchTerm}
-        onChange={(e) => dispatch(setSearchTerm(e.target.value))}
-      />
+  
+    return (
+  <div className="page-container">
+    <input
+      type="text"
+      placeholder="Search products..."
+      value={searchTerm}
+      onChange={(e) => dispatch(setSearchTerm(e.target.value))}
+      className="search-input"
+    />
 
+    <div className="product-grid">
       {filteredProducts.map((product) => (
-  <ProductItem key={product.id} product={product} />
-         ))}
-        </div>
-  );
+        <ProductItem key={product.id} product={product} />
+      ))}
+    </div>
+  </div>
+);
+
 };
 
 export default ProductList;

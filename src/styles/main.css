@@ -1,29 +1,181 @@
-nav {
-  padding: 10px;
-  background-color: #222;
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav a {
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8; /* shopping background */
+  color: #222;
+}
+
+/* =====================
+   HEADER / NAVBAR
+===================== */
+.header {
+  background-color: #1e293b;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   color: white;
-  margin-right: 10px;
-  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.product-card {
-  border: 1px solid #ddd;
+.header a {
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   PAGE CONTAINER
+===================== */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* =====================
+   SEARCH BAR
+===================== */
+.search-input {
+  width: 100%;
+  max-width: 420px;
   padding: 10px;
-  margin: 10px;
-  max-width: 250px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+/* =====================
+   PRODUCT GRID
+===================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* =====================
+   PRODUCT CARD
+===================== */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .product-img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
+.product-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =====================
+   CART & CHECKOUT
+===================== */
+.cart-item {
+  background: white;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item button {
+  margin-right: 6px;
+  margin-top: 8px;
+}
+
+.checkout-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+   FORMS
+===================== */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* =====================
+   NOT FOUND PAGE
+===================== */
+.not-found {
+  text-align: center;
+  padding: 60px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 600px) {
-  .product-card {
-    max-width: 100%;
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-img {
+    height: 150px;
   }
 }
 
