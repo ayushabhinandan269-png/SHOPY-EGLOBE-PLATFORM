@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setSearchTerm } from "../product/productSlice"
+import { setSearchTerm } from "../product/productSlice";
 import useFetchProducts from "../hooks/useFetchProducts";
 import ProductItem from "./ProductItem";
 
@@ -15,25 +15,27 @@ const ProductList = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
-  
-    return (
-  <div className="page-container">
-    <input
-      type="text"
-      placeholder="Search products..."
-      value={searchTerm}
-      onChange={(e) => dispatch(setSearchTerm(e.target.value))}
-      className="search-input"
-    />
+  return (
+    <div className="page-container">
+      {/* NEW: section title */}
+      <h2 style={{ marginBottom: "16px" }}>Product List</h2>
 
-    <div className="product-grid">
-      {filteredProducts.map((product) => (
-        <ProductItem key={product.id} product={product} />
-      ))}
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={(e) => dispatch(setSearchTerm(e.target.value))}
+        className="search-input"
+      />
+
+      <div className="product-grid">
+        {filteredProducts.map((product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}
+      </div>
     </div>
-  </div>
-);
-
+  );
 };
 
 export default ProductList;
+
